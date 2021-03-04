@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(250, 86, 21, 0.2); 
+            padding: 20px;
+            background-color: #35fa23;
+            margin-left: 450px;
+            margin-right: 390px;
+          }
+          form{
+              margin-left: 50px;
+          }
+          input{
+              margin-left: 20px;
+          }
+          .button{
+              background-color:rgb(255, 94, 0);
+              margin-left: 150px;
+          }
+    </style>
+</head>
+<html>
+    <body>
+        <h1 style="text-align:center;">Selection of Dog Breeds Based on user selected parameter</h1>
+        <div class="card">
+        <form action = "resp/" method = "POST"> {% csrf_token %}
+            <p>Select the size of the Pet : </p>
+            <input type = "radio" checked id ="small" name="size" value="small">
+            <label for ="small">Small</label>
+            <input type = "radio" id ="medium" name="size" value="medium">
+            <label for ="medium">Medium</label>
+            <input type = "radio" id ="large" name="size" value="large">
+            <label for ="large">Large</label>
+            <br>
+            <p>Select the length of the Hair : </p>
+            <input type="radio" checked id="short" name="length" value="short">
+            <label for="short">Short</label><br>
+            <input type="radio" id="medium" name="length" value="medium">
+            <label for="medium">Medium</label><br>  
+            <input type="radio" id="long" name="length" value="long">
+            <label for="long">Long</label><br>  <br>
+            <input type="submit" value="Submit" class="button"/>
+        </form>
+        </div>
+    </body>
+</html>
